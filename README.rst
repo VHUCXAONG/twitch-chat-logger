@@ -1,14 +1,14 @@
 twitch-chat-logger
 ==================
 
-A simple python app for logging twitch's chat to a PostgreSQL database. It
-logs an arbitrary ammount of channels (default is a 100) ordered by the
-numbers of viewers or an specific list of channels. Twitch seems to not like
-a single bot joining a large amount of channels, so each bot is limitted to
+A simple python app to record twitch's chatting history to a PostgreSQL database. It
+logs an arbitrary ammount of channels (default is 100) ordered by the
+numbers of viewers or an specific list of channels. Twitch seems not to allow
+a single bot to join a large amount of channels. Each bot is limitted to
 20 channels. This app automatically scales the number of bots according to how
-many channels are to be logged (e.g. logging a 100 channels will result in
-5 bots being created). The list of most popular channels is updated every 60
-seconds and the bots join and leave channels as needed.
+many channels are to be logged (e.g. logging 100 channels will result in
+5 bots being created). The list of the most popular channels is updated every 60
+seconds. The bots join and leave channels as needed.
 
 Logging 100 channels for 24 hours seems to amount to ~4 million chat lines
 (~400 MB).
